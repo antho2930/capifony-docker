@@ -2,10 +2,7 @@
 
 WORKDIR=$(pwd)
 SSH_AGENT=$(readlink -f $SSH_AUTH_SOCK)
-
-if [ $(command -v selinuxenabled >/dev/null 2>&1) -a $(selinuxenabled) ]; then
-    chcon -Rt svirt_sandbox_file_t $WORKDIR $SSH_AGENT
-fi
+KNOWN_HOSTS=$HOME/.ssh/known_hosts
 
 docker run \
     --rm \
@@ -13,5 +10,6 @@ docker run \
     -t \
     -v $WORKDIR:/root/workdir \
     -v $SSH_AGENT:/root/ssh-agent \
-    mjanser/capifony \
+    -v $KNOWN_HOSTS:/root/.ssh/known_hosts \
+    jcrombez/capifony \
     $@
