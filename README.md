@@ -10,4 +10,4 @@ capifony is a deployment recipes collection that works with both [symfony](http:
 # How to use
 
 For simplicity you can install a script inside you PATH, for example in `/usr/local/bin/cap`, which executes the above command.
-You can use the script at [https://github.com/jcrombez/capifony-docker/cap.sh](https://github.com/jcrombez/capifony-docker/cap.sh) for this.
+You can use the script at [https://raw.githubusercontent.com/jcrombez/capifony-docker/master/cap.sh](https://raw.githubusercontent.com/jcrombez/capifony-docker/master/cap.sh) for this.
