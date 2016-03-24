@@ -1,9 +1,9 @@
 FROM debian:jessie
 
-MAINTAINER Martin Janser <martin@duss-janser.ch>
+MAINTAINER Jérémy Crombez <jeremy.crombez@gmail.com>
 
 RUN apt-get update && apt-get install -y rubygems git
-RUN gem install capifony -v 2.8.3
+RUN gem install capifony
 RUN gem install capistrano_rsync_with_remote_cache
 
 ENV SSH_AUTH_SOCK /root/ssh-agent
