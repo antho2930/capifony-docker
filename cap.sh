@@ -9,5 +9,5 @@ docker run \
     -t \
     -v $WORKDIR:/root/workdir \
     -v $KNOWN_HOSTS:/root/.ssh/known_hosts \
-    antho2930/capifony \
+    jcrombez/capifony \
     $@
